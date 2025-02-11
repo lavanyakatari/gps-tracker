@@ -5,6 +5,7 @@ import cors from "cors";
 
 import EmployeeRouter from "./routers/employee.route.js";
 import GpsTrackerRouter from "./routers/gpsTracker.route.js";
+import { TodoRouter } from "./routers/todo.route.js";
 
 const app = express();
 const PORT = ENV_VAR.PORT || 5000;
@@ -25,7 +26,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/employee", EmployeeRouter);
 app.use("/api/gpsTracker", GpsTrackerRouter);
-
+app.use("/api/todo", TodoRouter);
 app.listen(PORT, () =>
   console.log(`server is running at port number: ${PORT}`)
 );
