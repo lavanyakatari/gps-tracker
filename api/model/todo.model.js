@@ -5,6 +5,19 @@ const todoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  userName: {
+    type: String,
+    required: true,
+  },
+
+  role: {
+    type: String,
+    required: true,
+  },
+  status: {
+    type: String,
+    required: true,
+  },
   completed: {
     type: Boolean,
     default: false,

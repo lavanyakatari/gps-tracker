@@ -2,7 +2,6 @@ import express from "express";
 import {
   createTodo,
   getTodo,
-  updateTodo,
   deleteTodo,
 } from "../controllers/todo.controller.js";
 

@@ -2,8 +2,14 @@ import { TodoModel } from "../model/todo.model.js";
 
 export const createTodo = async (req, res) => {
   try {
-    const { title } = req.body;
-    const todo = await TodoModel.create({ title });
+    const { title, userName, password, role, status } = req.body;
+    const todo = await TodoModel.create({
+      title,
+      userName,
+      password,
+      role,
+      status,
+    });
     res.json(todo);
   } catch (error) {
     res.status(500).json({ message: "Error creating todo" });
